@@ -4,12 +4,15 @@
 
 ```
 $ npm run start
+$ npm run electron
 ```
 
 #### パッケージング & 配布用
 
 ```
 $ npm run pack
-or 
+
+or
+
 $ npm run dist
 ```

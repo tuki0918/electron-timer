@@ -4,11 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=development electron .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "NODE_ENV=development ELECTRON_START_URL=http://localhost:3000 electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "postinstall": "electron-builder install-app-deps"
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
@@ -20,11 +22,30 @@
   "bugs": {
     "url": "https://github.com/tuki0918/electron-timer/issues"
   },
-  "homepage": "https://github.com/tuki0918/electron-timer#readme",
+  "homepage": ".",
+  "dependencies": {
+    "@types/jest": "24.0.6",
+    "@types/node": "11.9.5",
+    "@types/react": "16.8.4",
+    "@types/react-dom": "16.8.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-scripts": "2.1.5",
+    "typescript": "3.3.3333"
+  },
   "devDependencies": {
     "electron": "^4.0.5",
     "electron-builder": "^20.38.5"
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "build": {
     "appId": "io.github.tuki0918.electron-timer",
     "mac": {
