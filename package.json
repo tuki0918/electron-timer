@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tuki0918/electron-timer/issues"
   },
-  "homepage": "https://github.com/tuki0918/electron-timer#readme"
+  "homepage": "https://github.com/tuki0918/electron-timer#readme",
+  "devDependencies": {
+    "electron": "^4.0.5"
+  }
 }
