@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tuki0918/electron-timer#readme",
   "devDependencies": {
-    "electron": "^4.0.5"
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5"
   }
 }
