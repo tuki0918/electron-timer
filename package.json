@@ -10,7 +10,8 @@
     "eject": "react-scripts eject",
     "electron": "NODE_ENV=development ELECTRON_START_URL=http://localhost:3000 electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "repository": {
     "type": "git",
@@ -30,26 +31,35 @@
     "@types/react-dom": "16.8.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
     "typescript": "3.3.3333"
   },
   "devDependencies": {
     "electron": "^4.0.5",
-    "electron-builder": "^20.38.5"
+    "electron-builder": "^20.38.5",
+    "react-scripts": "2.1.5"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "build": {
+    "appId": "io.github.tuki0918.electron-timer",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "app.js"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "extends": null
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "build": {
-    "appId": "io.github.tuki0918.electron-timer",
-    "mac": {
-      "category": "public.app-category.developer-tools"
-    }
-  }
+  ]
 }
