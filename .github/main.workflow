@@ -6,7 +6,7 @@ workflow "Main" {
 action "UnitTest" {
   needs = "Package Install"
   uses = "actions/npm@master"
-  args = ["run", "test", "--", "--coverage"]
+  args = ["run", "test:ci"]
   secrets = ["COVERALLS_SERVICE_NAME", "COVERALLS_REPO_TOKEN"]
 }
 
