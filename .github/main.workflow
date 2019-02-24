@@ -6,7 +6,7 @@ workflow "Main" {
 action "UnitTest" {
   needs = "Package Install"
   uses = "actions/npm@master"
-  args = ["run", "test"]
+  args = ["run", "test", "--", "--coverage"]
 }
 
 action "Package Install" {
