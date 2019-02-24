@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment, { Moment } from 'moment';
 import './App.css';
 
 class App extends Component {
@@ -18,15 +19,15 @@ import { useState, useRef, useEffect } from 'react';
 
 function Counter() {
     const [count, setCount] = useState(0);
-    const date: Date = new Date();
+    const date: Moment = moment();
 
     useInterval(() => {
         // Your custom logic here
         setCount(count + 1);
     }, 1000);
 
-    document.title = date.toString();
-    return <h1>{date.toString()}</h1>;
+    document.title = date.format('HH:mm:ss');
+    return <h1>{date.format('HH:mm:ss')}</h1>;
 }
 
 function useInterval(callback: Function, delay: number) {
