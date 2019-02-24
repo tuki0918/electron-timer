@@ -26,7 +26,6 @@ function Counter() {
         setCount(count + 1);
     }, 1000);
 
-    document.title = date.format('HH:mm:ss');
     return <h1>{date.format('HH:mm:ss')}</h1>;
 }
 
