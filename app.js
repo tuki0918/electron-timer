@@ -8,7 +8,10 @@ let win;
 
 function createWindow() {
     // Create the browser window.
-    win = new BrowserWindow({ width: 400, height: 300, titleBarStyle: 'hiddenInset' });
+    win = new BrowserWindow({ width: 400, height: 150, titleBarStyle: 'hiddenInset' });
+
+    // TODO: MenuBar Config
+    win.setAlwaysOnTop(true);
 
     // and load the index.html of the app.
     const startUrl =
