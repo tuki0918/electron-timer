@@ -7,6 +7,7 @@ action "UnitTest" {
   needs = "Package Install"
   uses = "actions/npm@master"
   args = ["run", "test", "--", "--coverage"]
+  secrets = ["COVERALLS_SERVICE_NAME", "COVERALLS_REPO_TOKEN"]
 }
 
 action "Package Install" {
